@@ -1,0 +1,673 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@media (min-width: 200px) {
+
+	/* show 3 items */
+	.carousel-inner .active,
+	.carousel-inner .active + .carousel-item,
+	.carousel-inner .active + .carousel-item + .carousel-item {
+		display: block;
+	}
+	
+	.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+	.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+	.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+		transition: none;
+		margin-right: initial;
+	}
+	
+	.carousel-inner .carousel-item-next,
+	.carousel-inner .carousel-item-prev {
+		position: relative;
+		transform: translate3d(0, 0, 0);
+	}
+	
+	.carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+		position: absolute;
+		top: 0;
+		right: -33.3333%;
+		z-index: -1;
+		display: block;
+		visibility: visible;
+	}
+	
+	/* left or forward direction */
+	.active.carousel-item-left + .carousel-item-next.carousel-item-left,
+	.carousel-item-next.carousel-item-left + .carousel-item,
+	.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+	.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+		position: relative;
+		transform: translate3d(-100%, 0, 0);
+		visibility: visible;
+	}
+	
+	/* farthest right hidden item must be abso position for animations */
+	.carousel-inner .carousel-item-prev.carousel-item-right {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		display: block;
+		visibility: visible;
+	}
+	
+	/* right or prev direction */
+	.active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+	.carousel-item-prev.carousel-item-right + .carousel-item,
+	.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+	.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+		position: relative;
+		transform: translate3d(100%, 0, 0);
+		visibility: visible;
+		display: block;
+		visibility: visible;
+	}
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+.button_container {
+	position: absolute;
+  left: 0;
+  right: 0;
+  top: 30%;
+}
+
+.description, .link {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+}
+
+.description {
+	font-size: 35px;
+}
+
+.btn {
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 17px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn span {
+  position: relative; 
+  z-index: 1;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #78c7d2;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.link {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.link a {
+  color: #000;
+  font-size: 25px; 
+}
+
+html, body{
+	height: 100%;
+	width: 100%;
+	font-family: 'Montserrat';
+	scroll-behavior: smooth;
+
+}
+section{
+	border-bottom: 2px solid blue;
+	background-color: lightgrey;
+}
+#lottie{
+	position: absolute;
+	top: 0px;
+	left: 200px;
+	background-color: #fff;
+	width: 70%;
+	height: auto;
+	display: block;
+	overflow: hidden;
+	transform: translate3d(0,0,0);
+	text-align: center;
+	opacity: 1;
+}
+
+.navbar {
+	background: #23415c;
+	-o-transition: all .6s;
+	-moz-transition: all .6s;
+	-webkit-transition: all .6s;
+	-ms-transition: all .6s;
+	transition: all .6s;
+	backface-visibility: hidden;
+}
+
+.navbar.navbar-no-bg {
+	background: #444;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.navbar-dark .navbar-nav {
+	font-size: 15px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff;
+	color: rgba(255, 255, 255, 0.8);
+	border: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus {
+	color: #fff;
+	outline: 0;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.navbar-brand {
+	width: 105px;
+	background: url(../img/logo.png) left center no-repeat;
+	border: 0;
+	text-indent: -99999px;
+}
+#home{
+	background: url('/cluby/degardado bg.svg') no-repeat center center fixed;
+	display: table;
+	height: 75%;
+	position: relative;
+	width: 100%;
+	background-size: cover;
+}
+#headcluby{
+	position: absolute;
+	top: 100px;
+	right: 55px;
+	width: 60%;
+	height: 40%;
+	text-align: justify;
+	text-shadow: 2px 2px black;
+	font-size: 30px;
+	color: white;
+}
+#headclubynext{
+	position: absolute;
+	text-align: justify;
+}
+#logo{
+	max-width: 20%;
+	height: auto;
+	position: absolute;
+	top: 80px;
+	left: 150px;
+}
+#mancha1{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	max-width: 20%;
+	height: auto;
+}
+#mancha2{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	max-width: 20%;
+	height: auto;
+}
+#mancha4{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	max-width: 20%;
+	height: auto;
+}
+#mancha3{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	max-width: 20%;
+	height: auto;
+}
+.padding{
+	padding: 80px 0;
+}
+footer{
+	width: 100%;
+	background-color: #23415c;
+	padding: 5% 5% 10% 5%;
+	color: #FFF;
+	height: 30px;
+}
+#padres{
+	background: url('/cluby/padres.png');
+	height: 300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#proveedores{
+	background: url('/cluby/proveedores.png');
+	height: 300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.txtPadre{
+	color: #ee2e79;
+	max-width: 80%;
+	height: auto;
+	text-align: center;
+	position: absolute;
+	left: 70px;
+	top: 50px;
+}
+.txtPadre+p{
+	color: white;
+	max-width: 80%;
+	text-align: justify;
+	position: absolute;
+	left: 70px;
+	top: 150px;
+}
+.column {
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+#icono{
+	height: 25px;
+	width: 25px;
+}
+#titulotutor{
+	position: absolute;
+	top: 70px;
+	left: 70px;
+	font-size: calc(1rem + 1vw);
+	color: #32047A;
+	max-width: 100%;
+	height: auto;
+}
+#parrafotutor{
+	position: absolute;
+	top: 170px;
+	font-size: calc(1rem + 1vw);
+	text-align: center;
+	max-width: 100%;
+	height: auto;
+}
+#imgtutor{
+
+	size: calc(1rem + 1vw);
+	max-width: 100%;
+	height: auto;
+}
+#divtutor{
+	width: 100%
+	max-width: 100%;
+	height: auto;
+}
+.twocolordiv  {
+	position: relative;
+	z-index: 9;
+	background: white;
+	height: 380px;
+}
+.twocolordiv:before {
+	content: "";
+	color: white;
+	text-align: justify;
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #1c6db6;
+}
+.onecolordiv{
+	position: relative;
+	height: 350px;
+}
+#titulopadres{
+	position: absolute;
+	top: 20px;
+	left: 300px;
+	color: #ee2e79;
+}
+#padrespng{
+	position: absolute;
+	right: 50px;
+	top: 5px;
+	width: 25%;
+	max-width: 100%;
+	height: auto;
+}
+#textopadres{
+	position: absolute;
+	top: 100px;
+	left: 225px;
+	width: 50%;
+	text-align: justify;
+}
+#textomision{
+	position: absolute;
+	top: 250px;
+	left: 200px;
+	text-align: justify;
+	width: 50%;
+}
+#degradadomision{
+	text-align:center;
+	padding-bottom: 11px;
+	background: /* gradient can be an image */
+	linear-gradient(to right, #7ac943 0%, #006837 100%)
+	left 
+	bottom
+	#1C6DB6    
+	no-repeat; 
+	background-size:100% 10px ;/* if linear-gradient, we need to resize it */
+}
+#lupapng {
+	position: absolute;
+	left: 150px;
+	top: 120px;
+	width: 10%;
+	height: auto;
+}
+#estrellaspng{
+	position: absolute;
+	left: 145px;
+	top: 200px;
+	width: 13%;
+	height: auto;
+}
+#focopng{
+	position: absolute;
+	left: 150px;
+	top: 280px;
+	width: 10%;
+	height: auto;
+}
+#textolupa{
+	position: absolute;
+	left: 290px;
+	top: 130px;
+	width: 20%;
+	text-align: center;
+}
+#textoestrellas{
+	position: absolute;
+	left: 260px;
+	top: 215px;
+	width: 30%;
+	text-align: center;
+}
+#textofoco{
+	position: absolute;
+	left: 260px;
+	top: 300px;
+	width: 30%;
+	text-align: center;
+}
+#hpadres{
+	color: #62246b;
+	width: 60%;
+	height: auto;
+	position: absolute;
+	left: 150px;
+	text-align: center;
+}
+#maestropng{
+	width: 20%;
+	height: auto;
+	position: absolute;
+	left: 120px;
+}
+#titulomaestro{
+	position: absolute;
+	right: 250px;
+	top: 120px;
+	color: #ee2e79;
+}
+#subtitulomaestro{
+	position: absolute;
+	right: 400px;
+	top: 160px;
+}
+#textomaestro{
+	position: absolute;
+	right: 340px;
+	top: 200px;
+	width: 25%;
+	text-align: center;
+}
+#degradadoproveedores{
+	color: white;
+	padding-bottom: 11px;
+	background: /* gradient can be an image */
+	linear-gradient(to right, #f63668 0%, #ec8323 100%)
+	left
+	bottom
+	#62246B  
+	no-repeat;
+	background-size:100% 10px ;/* if linear-gradient, we need to resize it */
+	height: 193px;
+}
+#textoproveedores{
+	position: absolute;
+	top: 50px;
+	left: 180px;
+	text-align: center;
+	width: 70%;
+
+}
+#subproveedores{
+	position: absolute;
+	bottom: 40px;
+	left: 270px;
+}
+
+#imgplaystore{
+	position: absolute;
+	top: 65px;
+	width: 25%;
+	right: 50px;
+}
+#imgappstore{
+	position: absolute;
+	top: 65px;
+	width: 25%;
+	right: 380px;  
+	
+}
+#imgfacebook{
+	position: absolute;
+	top: 10px;
+	width: 20%;
+	right: 30px;  
+	
+}
+#imgblog{
+	position: absolute;
+	top: 10px;
+	width: 20%;
+	right: 380px;  
+
+}
+#textoapp{
+	width: 60%;
+	text-align: center;
+	position: absolute;
+	right: 50px;
+
+}
+#textregistro{
+	width: 50%;
+	text-align: center;
+	
+	top: 10px;
+
+}
+#sNombre{
+	width: 100%;
+	padding: 12px 20px;
+	margin: 20px 0;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 1px solid white;
+	background-color: #1C6DB6;
+	color: white;
+	text-align: right;
+}
+#sTelefono{
+	top: 10px;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 20px 0;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 1px solid white;
+	background-color: #1C6DB6;
+	color: white;
+	text-align: right;
+	left: 60px;
+}
+#sCorreo{
+	top: 10px;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 20px 0;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 1px solid white;
+	background-color: #1C6DB6;
+	color: white;
+	text-align: right;
+}
+#btnPadres{
+	position: absolute;
+	left: 380px;
+	size: 200px;
+}
+#imgnom{
+	position: absolute;
+	top: 100px;
+	width: 3%;
+	left: 30px;  
+	
+}
+#imgtel{
+	position: absolute;
+	top: 160px;
+	width: 3%;
+	left: 30px;  
+	
+}
+#imgcorr{
+	position: absolute;
+	top: 235px;
+	width: 4%;
+	left: 30px;  
+	
+}
+#imgnomp{
+	position: absolute;
+	top: 30px;
+	width: 3%;
+	right: 30px;  
+	
+}
+#imgtelp{
+	position: absolute;
+	top: 80px;
+	width: 3%;
+	right: 30px;  
+	
+}
+#imgcorrp{
+	position: absolute;
+	top: 150px;
+	width: 4%;
+	right: 30px;  
+	
+}
+#formpadres{
+	border-radius: 70px;
+	background: #1C6DB6;
+	padding: 70px;
+	height: 350px;
+}
+
+#formproveedor{
+	padding: 20px;
+	padding-right: 50px;
+	background: #32047A;
+}
+input[type="text"],
+select.rounded {
+	background-color: #32047A;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #000000;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 0;
+	border-color: white;
+}
+
+input[type="email"],
+select.rounded {
+	background-color: #32047A;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #000000;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 0;
+	border-color: white;
+
+}
+
+input[type="text"]:focus,
+select.rounded:focus {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+
+}
