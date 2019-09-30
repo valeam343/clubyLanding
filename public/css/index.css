@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+div{
+	color: black;
+	font-size: 20px;
+	margin: 0px;
+	padding: 0px;
+}
+html, body{
+	font-family: 'Montserrat';
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Montserrat';
+	scroll-behavior: smooth;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+/*
+*
+*PADRES => INICIO
++
+*/
+#padres{
+	height: 100%;
+
+}
+
+#divmisionverde{
+	background-color: #1c6db6 ;
+	text-align: justify;
+	color: white;
+	font-size: 22px;
+	padding: 40px 40px 20px 100px;
+
+
+}
+.twocolordiv  {
+	position: relative;
+	z-index: 9;
+	background: white;
+	height: 380px;
+}
+.twocolordiv:before {
+	content: "";
+	color: white;
+	text-align: justify;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+	top: 50%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #1c6db6;
+}
+.container-fluid{
+	width: 100%;
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+#degradadomision{
+	padding-bottom: 11px;
+	background: /* gradient can be an image */
+	linear-gradient(to right, #7ac943 0%, #006837 100%)
+	left 
+	bottom
+	#1C6DB6    
+	no-repeat; 
+	background-size:100% 10px ;/* if linear-gradient, we need to resize it */
+}
+
+#padrespng{
+	float: right;
+	width:170px;height:170px;margin-left:15px;
+
+}
+
+::placeholder {
+	color: white;
+	opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+	color: white;
+}
+
+
+#sNombre{
+	width: 100%;
+	padding: 10px 30px;
+	margin: 0px 0;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 1px solid white;
+	background-color: #1c6db6;
+	color: white;
+	text-align: left;
+	text-decoration-color: #1C6DB6;
+	
+}
+#sTelefono{
+
+	width: 100%;
+	padding: 10px 30px;
+	margin: 10px 0;
+	box-sizing: none;
+	border: none;
+	font-color:red;
+	border-bottom: 1px solid white;
+	background-color: #1c6db6;
+	color: white;
+	text-align: left;
+	text-decoration-color: #1C6DB6;
+}
+#sCorreo{
+
+	width: 100%;
+	padding: 10px 30px;
+	margin: 10px 0;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 1px solid white;
+	background-color: #1c6db6;
+	color: white;
+	text-align: left;
+	text-decoration-color:  #1C6DB6;
+}
+#sNombrep{
+	width: 100%;
+	padding: 10px 30px;
+	margin: 0px 0;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 1px solid white;
+	background-color: #62246b;
+	color: white;
+	text-align: right;
+	text-decoration-color: #1C6DB6;
+	
+}
+#sTelefonop{
+
+	width: 100%;
+	padding: 10px 30px;
+	margin: 10px 0;
+	box-sizing: none;
+	border: none;
+	font-color:red;
+	border-bottom: 1px solid white;
+	background-color: #62246b;
+	color: white;
+	text-align: right;
+	text-decoration-color: #1C6DB6;
+}
+#sCorreop{
+
+	width: 100%;
+	padding: 10px 30px;
+	margin: 10px 0;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 1px solid white;
+	background-color: #62246b;
+	color: white;
+	text-align: right;
+	text-decoration-color:  #1C6DB6;
+}
+
+#imgnom{
+	position: absolute;
+	/*top: 100px;*/
+	padding-top: 30px;
+	width: 3%;
+	left: 30px;   
+	
+}
+#imgtel{
+	position: absolute;
+	/*top: 145px;*/
+	padding-top: 30px;
+	width: 3%;
+	left: 30px;  
+	
+}
+#imgcorr{
+	position: absolute;
+	/*top: 225px;*/
+	padding-top: 30px;
+	width: 5%;
+	left: 30px;  
+	
+}
+#imgnomp{
+	position: absolute;
+	/*top: 100px;*/
+	padding-top: 30px;
+	width: 3%;
+	right: 30px; 
+	
+}
+#imgtelp{
+	position: absolute;
+	/*top: 145px;*/
+	padding-top: 30px;
+	width: 3%;
+	right: 30px;  
+	
+}
+#imgcorrp{
+	position: absolute;
+	/*top: 225px;*/
+	padding-top: 30px;
+	width: 5%;
+	right: 30px;  
+	
+	
+}
+#formpadres{
+	border-radius: 50px 0px 0px 50px;	
+	background: #1c6db6;
+	padding: 65px;
+	height: 360px;
+}
+
+#formproveedor{
+	border-radius: 0px 50px 50px 0px;	
+	background: #62246b;
+	padding: 65px;
+	height: 360px;
+}
+.button {
+	background-color: white;
+	border: none;
+	color: black;
+	padding: 10px 50px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 16px;
+	left: 650px;
+
+}
+/*
+*
+*
+*PADRES => FIN
+*
+*/
+/***
+*
+*FORM PADRE INICIO
+*
+*/
+#formpadre1{
+	height: auto;
+	padding: 20px;
+	vertical-align: center;
+
+}
+#formpadres{
+	text-align: center;
+}
+
+#divpadres{
+	padding-bottom: 20px;
+	text-align: center;
+	margin-left:auto; 
+	margin-right:auto;
+	font-size: 22px;
+	padding: 40px 40px 20px 100px;
+}
+.titulo{
+	padding-top: 20px;
+	text-align: center;
+	color:#f63668;
+}
+#imgtutor{
+	padding-top: 40px;
+}
+.titulo2{
+	padding-top: 20px;
+	text-align: center;
+	color:#62246b;
+}
+#textopadres{
+	text-align: justify;
+}
+#subtituloFormPadres{
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 80px;
+	color: #62246b;
+}
+
+#formpadre2{
+	height: auto;
+	padding-right: 0px;
+
+}
+#subtituloFormPadres2{
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	color: #62246b;
+}
+
+
+#lupapng {
+	width: 100%;
+	max-width: 60px;
+	height: auto;
+}
+#estrellaspng{
+	width: 100%;
+	max-width: 60px;
+	height: auto;
+}
+#focopng{
+	width: 100%;
+	max-width: 60px;
+	height: auto;
+}
+.imgFormPadres{
+	padding-right: 40px;
+}
+
+#tablaPadres{
+	text-align: center;
+	margin-left:auto; 
+	margin-right:auto;
+}
+
+/****
+*
+*
+*FORM PADRE FIN
+*
+*****/
+
+/**
+*
+ =>INICIO SECCION MAESTRO
+ **/
+ #tablaproveedores{
+ 	text-align: center;
+ 	margin-left:auto; 
+ 	margin-right:auto;
+ }
+
+ #subtituloFormProveedor1{
+ 	padding-top: 40px;
+ 	padding-bottom: 40px;
+ 	color: #1c6db6;
+ }
+
+ #subtituloFormProveedor2{
+ 	padding-top: 40px;
+ 	padding-bottom: 20px;
+ 	color: #1c6db6;
+ }
+ #grad1 {
+ 	height: 11px;
+ 	background-image: linear-gradient(to right, #7ac943, #006837);
+ }
+
+ #grad2{
+ 	height: 11px;
+ 	background-image: linear-gradient(to right, #f63668, #ec8323); /* Standard syntax (must be last) */
+
+ }
+ #maestro1{
+ 	width: 100%;
+ 	max-width: 0 auto;
+ 	height: auto;
+ 	text-align: center;
+ 	padding-left: 90px;
+ }
+ .botton{
+ 	vertical-align: bottom;
+ }
+ #maestro{
+ 	text-align: center;
+ 	padding-top: 200px;
+ 	vertical-align: bottom;
+ }
+ #degradado{
+ 	padding-top: 40px;
+ 	padding-bottom: 20px;
+ 	background-color: #62246b;
+ 	color: white;
+ 	text-align: center;
+ }
+ #maestro2{
+ 	height: auto;
+
+ }
+ #formproveedores{
+ 	text-align: center;
+ 	padding-top: 40px;
+ 	padding-left: 0px;
+ 	padding-bottom: 40px;
+ }
+ #formproveedores1{
+ 	height: auto;
+ 	padding-left: 0px;	
+ }
+ #formproveedores2{
+ 	height: auto;
+ }
+ #secgif{
+ 	height: auto;
+ 	text-align: center;
+ 	padding-top: 10px;
+
+ }
+
+ #tblMaestro{
+ 	text-align:center;
+ 	margin-left:auto; 
+ 	margin-right:auto;
+ }
+
+ td > h2.bottom{
+ 	padding-top: 140px;
+ 	padding-bottom: 20px;
+ } 
+ #lottie{
+ 	margin: 0 auto;
+ 	background-color: #fff;
+ 	width: 70%;
+ 	height: auto;
+ 	display: block;
+ 	overflow: hidden;
+ 	transform: translate3d(0,0,0);
+ 	text-align: center;
+ 	opacity: 1;
+ }
+
+
+ /********************** CSS DE KABIR***************/
+ #header{
+ 	background: url('/cluby/degardado bg.svg') no-repeat center center fixed;
+ 	position: relative;
+ 	max-width: 100%;
+ 	background-size: cover;
+ 	height: auto;
+ }
+ #logo{
+ 	padding-top: 30%;
+ 	padding-left: 20%;
+ 	max-width: 100%;
+ 	height: auto;
+ }
+ #textoheader{
+ 	padding-top: 8%;
+ 	padding-left: 5%;
+ 	max-width: 95%;
+ 	height: auto;
+ 	text-align: justify;
+ 	text-shadow: 2px 2px black;
+ 	font-size: 1.7em;
+ 	color: white;
+ }
+ #mancha1{
+ 	position: absolute;
+ 	top: 0px;
+ 	left: 0px;
+ 	max-width: 20%;
+ 	height: auto;
+ }
+ #mancha2{
+ 	position: absolute;
+ 	top: 0px;
+ 	right: 0px;
+ 	max-width: 20%;
+ 	height: auto;
+ }
+ #mancha3{
+ 	position: absolute;
+ 	bottom: 0px;
+ 	right: 0px;
+ 	max-width: 20%;
+ 	height: auto;
+ }
+ #mancha4{
+ 	position: absolute;
+ 	bottom: 0px;
+ 	left: 0px;
+ 	max-width: 20%;
+ 	height: auto;
+ }
+ #botones{
+ 	height: auto;
+ }
+
+ #page-content {
+ 	flex: 1 0 auto;
+ }
+
+ #sticky-footer {
+ 	flex-shrink: none;
+ 	left: 0;
+ 	bottom: 0;
+ 	width: 100%;
+ }
+ #footer2{
+ 	text-align: right;
+ }
+ #textofooter{
+ 	padding-right: 10px;
+ 	color: white;
+ 	font-weight: bold;
+ }
+ #facebook{
+ 	max-width: 15%;
+ 	height: auto;
+ 	padding-right: 10px;
+
+ }
+ #blogger{
+ 	max-width: 15%;
+ 	height: auto;
+ 	padding-left: 10px;
+ }
+ #playstore{
+ 	max-width: 20%;
+ 	height: auto;
+ }
+ #appstore{
+ 	max-width: 20%;
+ 	height: auto;
+ }
+
+
+ /* Other Classes for Page Styling */
+
+
+ #btnSecProveedores{
+ 	color: white;
+ }
+ #btnpadres{
+ 	background: url('/cluby/padres.png');
+ 	background-position: center;
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+ 	vertical-align: middle;
+ 	text-align: center;
+ }
+
+ #btnproveedores{
+ 	background: url('/cluby/proveedores.png');
+ 	background-position: center;
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+ 	text-align: center;
+ }
+ #btnFormPadres{
+ 	text-align: center;
+ 	padding-bottom: 5px;
+ }
+  #btnFormProve{
+ 	text-align: center;
+ 	padding-bottom: 5px;
+ }
+ #textobotones{
+ 	padding-top: 5%;
+ 	color: #ee2e79;
+ 	max-width: 100%;
+ 	height: auto;
+ 	text-align: center;
+ 	font-size: 1.2em;
+ }
+ #textobotones+p{
+ 	padding-top: 10%;
+ 	padding-left: 15%;
+ 	color: white;
+ 	max-width: 80%;
+ 	height: auto;
+ 	text-align: justify;
+ 	font-size: 1em;
+ }
+ 

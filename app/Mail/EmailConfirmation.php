@@ -7,20 +7,18 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class clubyMail extends Mailable
+class EmailConfirmation extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $data;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($data)
+    public function __construct()
     {
         //
-        $this->data = $data;
     }
 
     /**
@@ -30,9 +28,6 @@ class clubyMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.users.confirmation')
-        ->with(
-            ['texto' => 'algo de texto',]
-        );
+        return $this->markdown('emails.users.confirmation');
     }
 }

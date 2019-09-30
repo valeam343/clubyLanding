@@ -3,7 +3,7 @@
 /*
 |--------------------------------------------------------------------------
 | Web Routes
-|--------------------------------------------------------------------------
+|----------------------------------------------------------------------- 	---
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
@@ -20,3 +20,8 @@ Route::get('home', function(){
 });
 
 Route::post('create', 'clubyController@agregar');
+
+
+Route::get('index', function(){
+	return view('index');
+});
