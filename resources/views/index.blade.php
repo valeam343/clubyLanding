@@ -10,8 +10,8 @@
   <link rel="stylesheet" type="text/css" href="{{asset('/css/index.css')}}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="{{asset('/css/slick.css')}}">
-  <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
-  <!--<link rel="stylesheet" type="text/css" href="{{asset('/css/slick-theme.css')}}">-->
+ 
+ <link rel="stylesheet" type="text/css" href="{{asset('/css/slick-theme.css')}}">
   
   <style type="text/css">
 
